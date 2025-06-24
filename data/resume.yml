@@ -1,0 +1,109 @@
+# Resume Data
+# This file contains all your resume information in a structured format
+# that can be used by both markdown and LaTeX templates
+
+personal:
+  name: "Your Name"
+  title: "Software Engineer"
+  email: "your.email@example.com"
+  phone: "+1 (555) 123-4567"
+  location: "City, State"
+  website: "https://yourwebsite.com"
+  linkedin: "https://linkedin.com/in/yourprofile"
+  github: "https://github.com/yourusername"
+
+summary: |
+  Experienced software engineer with X years of experience in full-stack development,
+  cloud technologies, and team leadership. Passionate about creating scalable solutions
+  and mentoring junior developers.
+
+experience:
+  - company: "Tech Company Inc."
+    position: "Senior Software Engineer"
+    location: "City, State"
+    start_date: "2021-01"
+    end_date: "Present"
+    achievements:
+      - "Led development of microservices architecture serving 1M+ users"
+      - "Reduced system latency by 40% through optimization initiatives"
+      - "Mentored 3 junior developers and conducted code reviews"
+      - "Implemented CI/CD pipelines reducing deployment time by 60%"
+
+  - company: "Previous Company Ltd."
+    position: "Software Engineer"
+    location: "City, State"
+    start_date: "2019-06"
+    end_date: "2021-01"
+    achievements:
+      - "Developed RESTful APIs using Node.js and Express"
+      - "Built responsive web applications with React and TypeScript"
+      - "Collaborated with cross-functional teams in Agile environment"
+      - "Maintained 95%+ code coverage through comprehensive testing"
+
+education:
+  - institution: "University Name"
+    degree: "Bachelor of Science in Computer Science"
+    location: "City, State"
+    graduation_date: "2019-05"
+    gpa: "3.8/4.0"
+    relevant_coursework:
+      - "Data Structures and Algorithms"
+      - "Software Engineering"
+      - "Database Systems"
+      - "Computer Networks"
+
+skills:
+  programming_languages:
+    - "Python"
+    - "JavaScript/TypeScript"
+    - "Java"
+    - "Go"
+    - "SQL"
+  
+  frameworks_libraries:
+    - "React"
+    - "Node.js"
+    - "Express"
+    - "Django"
+    - "Flask"
+    - "Spring Boot"
+  
+  tools_technologies:
+    - "Docker"
+    - "Kubernetes"
+    - "AWS"
+    - "Git"
+    - "Jenkins"
+    - "PostgreSQL"
+    - "MongoDB"
+    - "Redis"
+
+projects:
+  - name: "E-commerce Platform"
+    description: "Full-stack web application with payment processing"
+    technologies: ["React", "Node.js", "PostgreSQL", "Stripe API"]
+    github: "https://github.com/yourusername/ecommerce-platform"
+    achievements:
+      - "Implemented secure payment processing"
+      - "Built admin dashboard for inventory management"
+      - "Achieved 99.9% uptime with proper error handling"
+
+  - name: "Data Analytics Dashboard"
+    description: "Real-time dashboard for business metrics visualization"
+    technologies: ["Python", "Django", "Chart.js", "PostgreSQL"]
+    github: "https://github.com/yourusername/analytics-dashboard"
+    achievements:
+      - "Processed and visualized 100K+ data points daily"
+      - "Created interactive charts and reports"
+      - "Implemented role-based access control"
+
+certifications:
+  - name: "AWS Certified Solutions Architect"
+    issuer: "Amazon Web Services"
+    date: "2022-03"
+    credential_id: "ABC123456"
+
+  - name: "Certified Kubernetes Application Developer"
+    issuer: "Cloud Native Computing Foundation"
+    date: "2021-11"
+    credential_id: "DEF789012"
