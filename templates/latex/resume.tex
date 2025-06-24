@@ -1,0 +1,84 @@
+\documentclass[11pt,a4paper,sans]{moderncv}
+
+% ModernCV themes
+\moderncvstyle{classic}
+\moderncvcolor{blue}
+
+% Character encoding
+\usepackage[utf8]{inputenc}
+
+% Adjust the page margins
+\usepackage[scale=0.75]{geometry}
+
+% Personal data
+\name{{{personal.name}}}{}
+\title{{{personal.title}}}
+\address{{{personal.location}}}
+\phone[mobile]{{{personal.phone}}}
+\email{{{personal.email}}}
+\homepage{{{personal.website}}}
+\social[linkedin]{{{personal.linkedin}}}
+\social[github]{{{personal.github}}}
+
+% Custom commands
+\newcommand{\listitem}[1]{\item #1}
+
+\begin{document}
+
+% Make the title
+\makecvtitle
+
+% Summary section
+\section{Summary}
+\cvitem{}{{{summary}}}
+
+% Experience section
+\section{Experience}
+{{#each experience}}
+\cventry{{{start_date}} -- {{end_date}}}{{{position}}}{{{company}}}{{{location}}}{}{
+\begin{itemize}
+{{#each achievements}}
+\listitem{{{this}}}
+{{/each}}
+\end{itemize}
+}
+{{/each}}
+
+% Education section
+\section{Education}
+{{#each education}}
+\cventry{{{graduation_date}}}{{{degree}}}{{{institution}}}{{{location}}}{{#if gpa}}{GPA: {{gpa}}}{{/if}}{
+{{#if relevant_coursework}}
+\textbf{Relevant Coursework:} {{#each relevant_coursework}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}
+{{/if}}
+}
+{{/each}}
+
+% Skills section
+\section{Technical Skills}
+\cvitem{Programming Languages}{{{#each skills.programming_languages}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}}
+\cvitem{Frameworks \& Libraries}{{{#each skills.frameworks_libraries}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}}
+\cvitem{Tools \& Technologies}{{{#each skills.tools_technologies}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}}
+
+% Projects section
+\section{Projects}
+{{#each projects}}
+\cvitem{{{name}}}{{{description}}}
+\cvitem{Technologies}{{{#each technologies}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}}
+\cvitem{GitHub}{\href{{{github}}}{{{github}}}}
+\cvitem{Achievements}{
+\begin{itemize}
+{{#each achievements}}
+\listitem{{{this}}}
+{{/each}}
+\end{itemize}
+}
+{{/each}}
+
+% Certifications section
+\section{Certifications}
+{{#each certifications}}
+\cvitem{{{date}}}{{{name}} - {{issuer}}}
+{{/each}}
+
+\end{document}
